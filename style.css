@@ -1,0 +1,135 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root{
+  --ff-staatiiches: 'Staatliches', cursive;
+  --ff-palaquin: 'Palanquin', sans-serif;
+
+  --bg-header: #8E9AAF;
+  --bg-h1: #CBC0D3;
+  --bg-h2: #FEEAFA;
+
+  --fc-h1: #FFFFFF;
+  --fc-p: #23053A;
+  --fc-h2: #4A4E69;
+
+  --fs-h1: 4rem;
+  --fs-p: 1.5rem;
+  --fs-h2:2rem;
+
+  font-size: 62.5%;
+}
+
+body{
+  margin: 0 auto;
+  text-align: center;
+}
+
+.page{
+  margin: 0 auto;
+  width: 38.4rem;
+}
+
+header{
+  background: var(--bg-header);
+  padding: 3.2rem 0 2.9rem;
+}
+
+header img{
+  margin-bottom: 3.2rem;
+}
+
+header h1{
+  font-family: var(--ff-staatiiches);
+  font-size: var(--fs-h1);
+  line-height: 3.4rem;
+  font-weight: normal;
+  letter-spacing: 0.05em;
+  color: var(--fc-h1);
+  text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+
+  background: var(--bg-h1);
+  padding: 0.8rem 0;
+
+  animation: leftRight 700ms;
+}
+
+main{
+  display: flex;
+  flex-direction: column;
+  gap: 3.2rem;
+  margin: 0 auto 6rem;
+}
+
+main p{
+  padding-top: 1.4rem;
+  font-family: var(--ff-palaquin);
+  font-size: var(--fs-p);
+  line-height: 1.8rem;
+  margin: 0 4.3rem 3.2rem 3.6rem;
+  color: var(--fc-p);
+}
+
+.card{
+  position: relative;
+  font-family: var(--ff-staatiiches);
+  animation: downtop 700ms;
+}
+
+.card h2{
+  font-size: var(--fs-h2);
+  font-weight: normal;
+  line-height: 3.4rem;
+  letter-spacing: 0.05em;
+
+  color: var(--fc-h2);
+  background: var(--bg-h2);
+
+  position: absolute;
+  top: 1.7rem;
+  right: 5rem;
+
+  padding: 1px 2.3rem;
+  border-radius: 2rem;
+
+  animation: topdown 500ms;
+}
+
+@keyframes topdown{
+  0%{
+    opacity: 0;
+    transform: translateY(-40px);
+  }
+
+  100%{
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes downtop{
+  0%{
+    opacity: 0;
+    transform: translateY(25px);
+  }
+
+  100%{
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes leftRight{
+  0%{
+    opacity: 0;
+    transform: translateX(-50px)
+  }
+
+  100%{
+    opacity: 1;
+    transform: translateX(0)
+  }
+}
